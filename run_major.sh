@@ -25,8 +25,8 @@ install_packages() {
     pkg install python3.10 -y
 }
 
-# Check if MajorClaimerBot directory exists
-if [ ! -d "MajorClaimerBot" ]; then
+# Check if MyNotpixel-bot directory exists
+if [ ! -d "MyNotpixel-bot" ]; then
     # If the directory does not exist, install everything
     install_packages
 
@@ -34,13 +34,13 @@ if [ ! -d "MajorClaimerBot" ]; then
     echo -e "${BLUE}Upgrading pip and installing wheel...${NC}"
     pip3.10 install --upgrade pip wheel --quiet
 
-    # Clone the MajorClaimerBot repository
-    echo -e "${BLUE}Cloning MajorClaimerBot repository...${NC}"
-    git clone https://github.com/sizifart/MajorClaimerBot
+    # Clone the MyNotpixel-bot repository
+    echo -e "${BLUE}Cloning MyNotpixel-bot repository...${NC}"
+    git clone https://github.com/rjfahad/MyNotpixel-bot
 
-    # Change directory to MajorClaimerBot
-    echo -e "${BLUE}Navigating to MajorClaimerBot directory...${NC}"
-    cd MajorClaimerBot || exit
+    # Change directory to MyNotpixel-bot
+    echo -e "${BLUE}Navigating to MyNotpixel-bot directory...${NC}"
+    cd MyNotpixel-bot || exit
 
     # Copy .env-example to .env
     echo -e "${BLUE}Copying .env-example to .env...${NC}"
@@ -66,8 +66,8 @@ if [ ! -d "MajorClaimerBot" ]; then
 
 else
     # If the directory exists, just navigate to it
-    echo -e "${GREEN}MajorClaimerBot is already installed. Navigating to the directory...${NC}"
-    cd MajorClaimerBot || exit
+    echo -e "${GREEN}MyNotpixel-bot is already installed. Navigating to the directory...${NC}"
+    cd MyNotpixel-bot || exit
 
     # Activate the virtual environment
     echo -e "${BLUE}Activating Python virtual environment...${NC}"
